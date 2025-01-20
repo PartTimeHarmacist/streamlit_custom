@@ -5,9 +5,9 @@ RUN groupadd --gid 1000 appuser \
 
 RUN pip3 install --no-cache-dir --upgrade pip
 
-RUN apt-get update && apt-get install -y git
-#    build-essential \
-#    software-properties-common \
+#RUN apt-get update && apt-get install -y git
+##    build-essential \
+##    software-properties-common \
 
 RUN rm -rf /var/lib/apt/lists/*
 
