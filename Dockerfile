@@ -14,6 +14,10 @@ RUN rm -rf /var/lib/apt/lists/*
 USER appuser
 WORKDIR /home/appuser
 
+COPY requirements.txt /home/appuser/requirements.txt
+
+RUN pip3 install -r /home/appuser/requirements.txt
+
 EXPOSE 8501
 
 CMD python -m streamlit hello
